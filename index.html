@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+    <script src="script.js"></script>
   </head>
   <body>
     <nav>
@@ -19,7 +20,7 @@
     <div class="milestone-container">
       <div class="milestone-card">
         <h2>Frontend Milestones!</h2>
-        <ol>
+        <ol id="frontend-milestone">
           <li>JavaScript</li>
           <li>React</li>
           <li>HTML</li>
@@ -30,18 +31,17 @@
       <!-- Backend Milestones-->
       <div class="milestone-card">
         <h2>Backend Milestones!</h2>
-        <ul>
+        <ol id="backend-milestone">
           <li>Node.js</li>
           <li>Express</li>
           <li>Database</li>
           <li>Docker</li>
-        </ul>
+        </ol>
         <a href="http://academy.cleverse.com/">view course info</a>
       </div>
     </div>
     <hr />
-
-    <div class="form">
+    <!--<div class="form">
       <p>Form</p>
       <form>
         <label for="username">Username:</label>
@@ -54,6 +54,21 @@
         <input type="password" id="password" required />
         <br />
         <button type="submit">Login</button>
+      </form>
+    </div>-->
+
+    <div>
+      <p>Form</p>
+      <form>
+        <label for="frontend">Add Front-end Milestone:</label>
+        <input type="text" id="frontend" />
+        <button id="add-front">Submit</button>
+      </form>
+      <br />
+      <form>
+        <label for="backend">Add Back-end Milestone:</label>
+        <input type="text" id="backend" />
+        <button id="add-back">Submit</button>
       </form>
     </div>
   </body>
