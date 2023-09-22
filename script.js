@@ -1,35 +1,47 @@
-const main = () => {
-  const frontendInput = document.getElementById("frontend");
+const main = async () => {
+  try {
+    const response = await fetch("https://api.minireg.thanayut.in.th/courses");
+    console.log(response);
+    const rawData = await response.json();
+    if (!response.ok) {
+      throw new Error(`code - ${response.status} - ${rawData.message}`);
+    }
+    console.log(rawData);
+  } catch (err) {
+    console.log(err);
+  }
 
-  const frontendButton = document.getElementById("add-front");
+  //   const frontendInput = document.getElementById("frontend");
 
-  const frontendMilestonesList = document.getElementById("frontend-milestone");
+  //   const frontendButton = document.getElementById("add-front");
 
-  frontendButton.addEventListener("click", (e) => {
-    e.preventDefault();
+  //   const frontendMilestonesList = document.getElementById("frontend-milestone");
 
-    const newList = document.createElement("li");
+  //   frontendButton.addEventListener("click", (e) => {
+  //     e.preventDefault();
 
-    newList.textContent = frontendInput.value;
+  //     const newList = document.createElement("li");
 
-    frontendMilestonesList.appendChild(newList);
-  });
+  //     newList.textContent = frontendInput.value;
 
-  const backendInput = document.getElementById("backend");
+  //     frontendMilestonesList.appendChild(newList);
+  //   });
 
-  const backendButton = document.getElementById("add-back");
+  //   const backendInput = document.getElementById("backend");
 
-  const backendMilestonesList = document.getElementById("backend-milestone");
+  //   const backendButton = document.getElementById("add-back");
 
-  backendButton.addEventListener("click", (e) => {
-    e.preventDefault();
+  //   const backendMilestonesList = document.getElementById("backend-milestone");
 
-    const newList = document.createElement("li");
+  //   backendButton.addEventListener("click", (e) => {
+  //     e.preventDefault();
 
-    newList.textContent = backendInput.value;
+  //     const newList = document.createElement("li");
 
-    backendMilestonesList.appendChild(newList);
-  });
+  //     newList.textContent = backendInput.value;
+
+  //     backendMilestonesList.appendChild(newList);
+  //   });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
