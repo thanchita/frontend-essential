@@ -31,16 +31,3 @@ const main = async () => {
 document.addEventListener("DOMContentLoaded", () => {
   main();
 });
-
-// console.log(rawData.courses)
-// } catch (err) {
-
-// } catch (err) {
-//     //   console.log(err);
-//     // }
-//     //   });
-//     //   let j = n
-//     //   courses[i]
-
-//     //   }
-//    // console.log(response)
